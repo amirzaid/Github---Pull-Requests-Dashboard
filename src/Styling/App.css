@@ -1,0 +1,81 @@
+:root {
+  --main-bg-color: #2F4858;
+  --secondary-bg-color: #DAF7DC;
+  --header-color: #888;
+}
+
+body {
+  font-family: 'Roboto', sans-serif !important;
+  background-color: var(--main-bg-color) !important;
+  color: #fff !important;
+}
+
+.App {
+  padding: 1.5em 1em;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--header-color); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.grid-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+header {
+  grid-column: 1/-1;
+}
+
+.log {
+  overflow: auto;
+  grid-column: 1/-1;
+  height: 300px;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #fff;
+  transition: max-height 0.2s ease-out;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  font-size: 1.3em;
+}
+
+@media screen and (max-width: 700px) {
+  h1, h2, h3 {
+    font-size: 1.7em;
+  }
+}
+
+.Card {
+  border-radius: 10px;
+  color: #000;
+  background-color: #fff;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+.Card h3 {
+  margin: 0;
+}
